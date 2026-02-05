@@ -16,7 +16,7 @@ def get_default_settings():
     """
     Get the project default settings
     """
-    config = RawConfigParser()
+    config = SafeConfigParser()
     config.read(ROGUEHOSTAPD_DEFAULT_CONFIGPATH)
     default_settings = collections.defaultdict()
     for section in config.sections():
